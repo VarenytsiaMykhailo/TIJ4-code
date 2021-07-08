@@ -1,4 +1,3 @@
-//: operators/Equivalence.java
 
 public class Equivalence {
   public static void main(String[] args) {
