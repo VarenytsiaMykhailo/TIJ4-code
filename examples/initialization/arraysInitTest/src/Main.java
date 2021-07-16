@@ -13,5 +13,10 @@ public class Main {
         for (int i = 0; i < arr2.length; i++) {
             arr2[i] = new A(i + "");
         }
+
+        // arr2.length = 2; // нельзя т.к. final
+
+        System.out.println(int[].class);
+        System.out.println(Integer.class);
     }
 }
