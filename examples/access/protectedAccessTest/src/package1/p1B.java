@@ -1,6 +1,7 @@
 package package1;
 
 import package2.p2A;
+import package2.*;
 
 public class p1B extends p2A {
 
@@ -17,6 +18,6 @@ public class p1B extends p2A {
         System.out.println(b);
         System.out.println(c);
         //System.out.println(d); // default-package access. This field is not available from p1B class
-
+        // System.out.println(p2ASD.a); default-package access. This class is not available from p1B class
     }
 }
