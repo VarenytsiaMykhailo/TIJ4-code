@@ -17,5 +17,17 @@ public class Main {
         bb.str = "22";
         System.out.println(bb.hashCode());
 
+        B bb2 = new B();
+        System.out.println(bb2.hashCode());
+        bb2.c = 1;
+        System.out.println(bb2.hashCode());
+        bb2.str = "22";
+        System.out.println(bb2.hashCode());
+
+
+        B c1 = new B();
+        System.out.println(c1.hashCode());
+        B c2 = new B();
+        System.out.println(c2.hashCode());
     }
 }
