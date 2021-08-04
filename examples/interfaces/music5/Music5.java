@@ -1,14 +1,13 @@
 //: interfaces/music5/Music5.java
 // Interfaces.
-package interfaces.music5;
-import polymorphism.music.Note;
+
 import static net.mindview.util.Print.*;
 
-interface Instrument {
+interface Instrument extends Playable {
   // Compile-time constant:
   int VALUE = 5; // static & final
   // Cannot have method definitions:
-  void play(Note n); // Automatically public
+
   void adjust();
 }
 
@@ -47,7 +46,7 @@ class Woodwind extends Wind {
 public class Music5 {
   // Doesn't care about type, so new types
   // added to the system still work right:
-  static void tune(Instrument i) {
+  static void tune(Playable i) {
     // ...
     i.play(Note.MIDDLE_C);
   }
