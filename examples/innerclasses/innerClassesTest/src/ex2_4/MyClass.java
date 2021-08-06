@@ -1,4 +1,4 @@
-package ex2;
+package ex2_4;
 
 public class MyClass {
     private String str = "MyClassStr";

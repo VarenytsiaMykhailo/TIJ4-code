@@ -1,4 +1,4 @@
-package ex2;
+package ex2_4;
 
 interface Selector {
     boolean end();
@@ -35,6 +35,10 @@ public class Sequence {
         public void next() {
             if (i < items.length) i++;
         }
+
+        public Sequence getOuterSequenceRef() {
+            return Sequence.this;
+        }
     }
 
     public Selector selector() {
@@ -52,6 +56,12 @@ public class Sequence {
             System.out.print(selector.current() + " ");
             selector.next();
         }
+
+        Sequence sequence1 = ((Sequence.SequenceSelector) selector).getOuterSequenceRef();
+
+        System.out.println();
+        System.out.println(sequence);
+        System.out.println(sequence1);
     }
 } /* Output:
 0 1 2 3 4 5 6 7 8 9
